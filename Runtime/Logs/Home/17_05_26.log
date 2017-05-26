@@ -38,3 +38,69 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
 
+[ 2017-05-26T18:13:29+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:14:10+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:16:21+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:16:23+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:16:32+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Login/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:16:36+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Login/login.html
+ERR: 无法加载控制器:Login
+
+[ 2017-05-26T18:17:21+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Login/login.html
+ERR: 模板不存在:/Applications/MAMP/htdocs/tdxy-questionnaire/Home/View/Login/login.html
+
+[ 2017-05-26T18:17:56+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:18:03+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:18:03+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:18:03+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:21:44+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:24:43+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:24:50+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:25:36+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:25:56+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:26:57+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:27:41+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:27:42+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:27:43+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:30:33+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/User/verifyImg.html
+ERR: 无法加载控制器:User
+
+[ 2017-05-26T18:56:52+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/afterindex.html
+ERR: 非法操作:afterindex
+
