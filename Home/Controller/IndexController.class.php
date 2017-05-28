@@ -10,4 +10,9 @@ class IndexController extends Controller
         $this->redirect('Login/login');
 
     }
+    public  function  questionnaire(){
+     // 判断一下是否登陆  待完成
+     $this->display();
+
+    }
 }

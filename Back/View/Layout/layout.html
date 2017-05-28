@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="{$Think.config.BACK_CSS_URL}styles.css" type="text/css" rel="stylesheet" media="all">
+    <link href="{$Think.config.BACK_CSS_URL}menustyles.css" type="text/css" rel="stylesheet" media="all">
+
+    <script type="text/javascript" src="{$Think.config.BACK_JS_URL}jquery.min.js"></script>
+    <script src="{$Think.config.BACK_JS_URL}echarts.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<table cellspacing=0 cellpadding=0 width="100%"
+       background="{$Think.config.BACK_IMG_URL}header_bg.jpg" border=0>
+    <tr height=56>
+        <td width=260><img height=56 src="{$Think.config.BACK_IMG_URL}header_left.jpg"
+                           width=260></td>
+        <td style="font-weight: bold; color: #fff; padding-top: 20px" align=middle>当前用户：{$username}
+            &nbsp;
+            <a style="color: #fff"
+               onclick="if (confirm('确定要退出吗？')) return true; else return false;"
+               href="{:U('Admin/layout')}?username={$username}"
+               target=_top>退出系统</a>
+        </td>
+        <td align=right width=268>
+            <img height=56 src="{$Think.config.BACK_IMG_URL}header_right.jpg" width=268>
+        </td>
+    </tr>
+</table>
+<div id="w">
+    <nav>
+        <ul id="ddmenu">
+            <li><a href="{:U('Admin/index')}">管理中心</a></li>
+            <li><a href="{:U('ShowData/echarts')}">问卷数据分析</a></li>
+            <li><a href="">查看完成进度</a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
+{__CONTENT__}
+</body>
+
+</html>

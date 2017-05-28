@@ -1,10 +1,10 @@
 <?php
-namespace Home\Controller;
+namespace Back\Controller;
 
 use Think\Controller;
 use Think\Verify;
 
-class LoginController extends Controller
+class AdminController extends Controller
 {
     //生成验证码
     public function verifyImg()
@@ -28,35 +28,34 @@ class LoginController extends Controller
         if (!empty($_POST)) {
             // post 非空的话 就把 登陆信息收集起来
             $userpwd = array(
-                'idnumber' => $_POST['username'],
-                'passwd' => $_POST['password'],
+                'username' => $_POST['username'],
+                'password' => $_POST['password'],
             );
 
             //校验验证码
             $vry = new Verify();
             //先验证 验证吗是否正确
             if ($vry->check($_POST['checkcode'])) {
-                //表单收集  过来到 username 和password 封装在一个数组里面
 
-                // 去数据库查 这一个组合
-                $info = D('student')->where($userpwd)->find();
+                //$info = D('management')->where($userpwd)->find();
+                $info = D();
+                $sql = "SELECT  *
+                         FROM management
+                         WHERE iuser='".$userpwd['username']."' AND passwd='".$userpwd['password']."'";
+
+                $data = $info->query($sql);
                 //如果有 保存session 跳转到首页
-                if ($info) {
-                //if ($userpwd) {
+                if ($data) {
                     //session持久化用户信息(名字)，页面跳转
-                    // session('username', $info['username']);
-                    //session('userid',$info['userid']);
-                    //session('stuname', $userpwd['username']);
-                   // session('userid', $userpwd['userid']);
-                    //dump(session('userid'));
-                    // 用户信息没有问题的话 开始做题 跳到题目页面
-                    $this->redirect('Index/questionnaire');
+                    session('username', $userpwd['username']);
+                    // 用户信息没有问题的话 进入首页
+
+                    $this->redirect('Admin/index');
                 } else {
                     $error = "用户名或密码错误";
                     $this->assign('error', $error);
                     //echo "用户名或密码错误";
-                    // 这里就不回显了
-                    $this->assign('user', $userpwd);
+
                 }
             } else {
                 $error = "验证码输入有误，看不清？点击一下图片";
@@ -67,21 +66,40 @@ class LoginController extends Controller
                 $this->assign('user', $userpwd);
 
             }
+
         }
 
 
         $this->display();
     }
 
-    // 登陆名 恶意字符判断
-    function checkstr($str)
+    // 判断是否登陆
+    public function islogin()
     {
-        $needle = "a";//判断是否包含a这个字符
-        $tmparray = explode($needle, $str);
-        if (count($tmparray) > 1) {
-            return true;
+        if (!isset($_SESSION['username'])) {
+            $this->error('对不起,您还没有登录!请先登录再进行浏览', U('Admin/login'), 2);
         } else {
-            return false;
+            $session = $_SESSION['username'];
+            $this->assign('username', $session);
+            //dump($session);
         }
     }
+
+    //退出系统
+    public function layout()
+    {
+        if (!empty($_GET)) {
+
+            session('username', null);
+        }
+        $this->redirect('Admin/login');
+    }
+
+    public function index()
+    {    //判断 是否登陆
+        $this->islogin();
+
+        $this->display();
+    }
+
 }
