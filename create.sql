@@ -31,14 +31,14 @@ create table think_questionsnaire_selected (iterm varchar(9) NOT NULL,
 create table think_questionsnaire_option (iterm varchar(9) NOT NULL,
 	inumber int(4) NOT NULL,
 	ioption varchar(18),##选项
-	text1 varchar(120),##内容
-	PRIMARY KEY(iterm,inumber),
+	text1 varchar(25),##内容
+	PRIMARY KEY(iterm,inumber,ioption),
 	FOREIGN KEY(iterm,inumber) REFERENCES think_questionsnaire_selected(iterm,inumber))ENGINE=InnoDB DEFAULT character set=utf8;
 create table think_questionsnaire_sanswer (iterm varchar(9) NOT NULL,
 	inumber int(4) NOT NULL,
 	idnumber varchar(18) NOT NULL,
 	answer varchar(20),##答案
-	PRIMARY KEY(iterm,inumber),
+	PRIMARY KEY(iterm,inumber,answer),
 	FOREIGN KEY(iterm,inumber) REFERENCES think_questionsnaire_selected(iterm,inumber),
 	FOREIGN KEY(idnumber) REFERENCES think_student(idnumber))ENGINE=InnoDB DEFAULT character set=utf8;
 
@@ -50,7 +50,7 @@ create table think_questionsnaire_freesponce (iterm varchar(9) NOT NULL,
 create table think_questionsnaire_fanswer (iterm varchar(9) NOT NULL,
 	inumber int(4) NOT NULL,
 	idnumber varchar(18) NOT NULL,
-	text1 varchar(100),
+	text1 varchar(200),
 	PRIMARY KEY(iterm,inumber),
 	FOREIGN KEY(iterm,inumber) REFERENCES think_questionsnaire_freesponce(iterm,inumber),
 	FOREIGN KEY(idnumber) REFERENCES think_student(idnumber))ENGINE=InnoDB DEFAULT character set=utf8;
