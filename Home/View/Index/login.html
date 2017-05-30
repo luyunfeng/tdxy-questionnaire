@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{$Think.config.CSS_URL}base.css" type="text/css">
     <link rel="stylesheet" href="{$Think.config.CSS_URL}global.css" type="text/css">
     <link rel="stylesheet" href="{$Think.config.CSS_URL}login.css" type="text/css">
-
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
 </head>
 <body>
 <div style="clear:both;"></div>
@@ -31,7 +33,7 @@
                 <ul>
                     <li>
                         <label for="">用户名：</label>
-                        <input type="text" class="txt" name="username" value="{$user.idnumber}"/>
+                        <input type="text" class="txt" name="username" value="{$user.iuser}"/>
                     </li>
                     <li>
                         <label for="">密码：</label>
@@ -42,7 +44,7 @@
                     <li class="checkcode">
                         <label for="">验证码：</label>
                         <input type="text"  name="checkcode" />
-                        <img src="{:U('Login/verifyImg')}" onclick="this.src='{:U(\'Login/verifyImg\')}'" />
+                        <img src="{:U('Index/verifyImg')}" onclick="this.src='{:U(\'Index/verifyImg\')}'" />
 
                     </li>
 
@@ -55,7 +57,7 @@
             <div style="color:#F00 ;font-size:20px;">{$error}</div>
             <div class="coagent mt15">
                 <dl>
-                    <dt>登陆小提示：账号是你高考的准考证，密码你身份证的后面6位</dt>
+                    <dt>登陆小提示：账号是你高考的准考证，密码你身份证的后面6位(有人末尾是小x哦)</dt>
 
                 </dl>
             </div>

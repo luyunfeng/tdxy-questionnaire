@@ -1,10 +1,19 @@
 <?php
 return array(
-	//'配置项'=>'配置值'
+    //'配置项'=>'配置值'
     //增加调试信息  在上线的屏蔽掉
     SHOW_PAGE_TRACE => true,
-    'VAR_AJAX_SUBMIT'  =>  'ajax',  // 默认的AJAX提交变量
-    'SESSION_AUTO_START' => true, //是否开启session
+    'VAR_AJAX_SUBMIT' => 'ajax',  // 默认的AJAX提交变量
+    //'SESSION_AUTO_START' => true, //是否开启session
+    /*'SESSION_OPTIONS'         =>  array(
+        'name'                =>  'BJYSESSION',                    //设置session名
+        'expire'              =>  60,                            //SESSION保存时间
+        'use_trans_sid'       =>  1,                               //跨页传递
+        'use_only_cookies'    =>  0,                               //是否只开启基于cookies的session的会话方式
+    ),*/
+    'SESSION_OPTIONS' => array('use_only_cookies' => 0, 'use_trans_sid' => 1),
+
+
     //前台  Home 配置
     'CSS_URL' => '/tdxy-questionnaire/Home/Public/css/',
     'JS_URL' => '/tdxy-questionnaire/Home/Public/js/',
@@ -13,7 +22,6 @@ return array(
     'BACK_CSS_URL' => '/tdxy-questionnaire/Back/Public/css/',
     'BACK_JS_URL' => '/tdxy-questionnaire/Back/Public/js/',
     'BACK_IMG_URL' => '/tdxy-questionnaire/Back/Public/img/',
-
 
 
     /* 数据库设置 */
