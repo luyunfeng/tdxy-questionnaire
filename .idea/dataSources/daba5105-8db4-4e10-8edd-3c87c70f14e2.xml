@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="think_stu_questionsnaire@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="think_stu_questionsnaire">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="booking"/>
+    <schema id="4" parent="1" name="bookstore"/>
+    <schema id="5" parent="1" name="db_blog"/>
+    <schema id="6" parent="1" name="db_image"/>
+    <schema id="7" parent="1" name="db_student"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <table id="11" parent="2" name="think_management"/>
+    <table id="12" parent="2" name="think_questionsnaire_fanswer"/>
+    <table id="13" parent="2" name="think_questionsnaire_freesponce"/>
+    <table id="14" parent="2" name="think_questionsnaire_option"/>
+    <table id="15" parent="2" name="think_questionsnaire_sanswer"/>
+    <table id="16" parent="2" name="think_questionsnaire_selected"/>
+    <table id="17" parent="2" name="think_student"/>
+    <column id="18" parent="11" name="ID">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="11" name="iuser">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="11" name="passwd">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="21" parent="11" name="lastlogintime">
+      <Position>4</Position>
+      <DataType>varchar(24)|0</DataType>
+    </column>
+    <column id="22" parent="11" name="logincount">
+      <Position>5</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <key id="23" parent="11" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="12" name="iterm">
+      <Position>1</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="12" name="inumber">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="12" name="idnumber">
+      <Position>3</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="12" name="text1">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <index id="28" parent="12" name="idnumber">
+      <ColNames>idnumber</ColNames>
+    </index>
+    <key id="29" parent="12" name="PRIMARY">
+      <ColNames>iterm
+inumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="12" name="think_questionsnaire_fanswer_ibfk_1">
+      <ColNames>iterm
+inumber</ColNames>
+      <RefSchemaName>think_stu_questionsnaire</RefSchemaName>
+      <RefTableName>think_questionsnaire_freesponce</RefTableName>
+      <RefColNames>iterm
+inumber</RefColNames>
+    </foreign-key>
+    <foreign-key id="31" parent="12" name="think_questionsnaire_fanswer_ibfk_2">
+      <ColNames>idnumber</ColNames>
+      <RefSchemaName>think_stu_questionsnaire</RefSchemaName>
+      <RefTableName>think_student</RefTableName>
+      <RefColNames>idnumber</RefColNames>
+    </foreign-key>
+    <column id="32" parent="13" name="iterm">
+      <Position>1</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="13" name="inumber">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="34" parent="13" name="text1">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="35" parent="13" name="PRIMARY">
+      <ColNames>iterm
+inumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="14" name="iterm">
+      <Position>1</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="14" name="inumber">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="14" name="ioption">
+      <Position>3</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="14" name="text1">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="40" parent="14" name="PRIMARY">
+      <ColNames>iterm
+inumber
+ioption</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="14" name="think_questionsnaire_option_ibfk_1">
+      <ColNames>iterm
+inumber</ColNames>
+      <RefSchemaName>think_stu_questionsnaire</RefSchemaName>
+      <RefTableName>think_questionsnaire_selected</RefTableName>
+      <RefColNames>iterm
+inumber</RefColNames>
+    </foreign-key>
+    <column id="42" parent="15" name="iterm">
+      <Position>1</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="15" name="inumber">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="15" name="idnumber">
+      <Position>3</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="15" name="answer">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="46" parent="15" name="idnumber">
+      <ColNames>idnumber</ColNames>
+    </index>
+    <key id="47" parent="15" name="PRIMARY">
+      <ColNames>iterm
+inumber
+answer</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="15" name="think_questionsnaire_sanswer_ibfk_1">
+      <ColNames>iterm
+inumber</ColNames>
+      <RefSchemaName>think_stu_questionsnaire</RefSchemaName>
+      <RefTableName>think_questionsnaire_selected</RefTableName>
+      <RefColNames>iterm
+inumber</RefColNames>
+    </foreign-key>
+    <foreign-key id="49" parent="15" name="think_questionsnaire_sanswer_ibfk_2">
+      <ColNames>idnumber</ColNames>
+      <RefSchemaName>think_stu_questionsnaire</RefSchemaName>
+      <RefTableName>think_student</RefTableName>
+      <RefColNames>idnumber</RefColNames>
+    </foreign-key>
+    <column id="50" parent="16" name="iterm">
+      <Position>1</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="16" name="inumber">
+      <Position>2</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="16" name="itype">
+      <Position>3</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="53" parent="16" name="text1">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="54" parent="16" name="PRIMARY">
+      <ColNames>iterm
+inumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="17" name="idnumber">
+      <Position>1</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="17" name="iterm">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="57" parent="17" name="iuser">
+      <Position>3</Position>
+      <DataType>int(14)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="17" name="passwd">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="59" parent="17" name="iname">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="60" parent="17" name="sex">
+      <Position>6</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="iscore">
+      <Position>7</Position>
+      <DataType>int(3)|0</DataType>
+    </column>
+    <column id="62" parent="17" name="college">
+      <Position>8</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="63" parent="17" name="professional">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="64" parent="17" name="schoolbranch">
+      <Position>10</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="65" parent="17" name="collegebranch">
+      <Position>11</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="66" parent="17" name="istatus">
+      <Position>12</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="67" parent="17" name="logintime">
+      <Position>13</Position>
+      <DataType>varchar(24)|0</DataType>
+    </column>
+    <column id="68" parent="17" name="finishtime">
+      <Position>14</Position>
+      <DataType>varchar(24)|0</DataType>
+    </column>
+    <key id="69" parent="17" name="PRIMARY">
+      <ColNames>idnumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

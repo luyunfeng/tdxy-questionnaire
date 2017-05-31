@@ -1,0 +1,236 @@
+[ 2017-05-30T09:43:35+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/questionnaire?iuser=14230111
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id14230111' in 'where clause'
+
+[ 2017-05-30T09:43:55+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/questionnaire/iuser/14230111.html
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id14230111' in 'where clause'
+
+[ 2017-05-30T15:04:37+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-05-30T15:04:39+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2017-05-30T15:04:39+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2017-05-30T15:04:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-05-30T15:04:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-05-30T15:04:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-05-30T15:04:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-05-30T15:04:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-05-30T15:04:41+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2017-05-30T15:04:41+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-05-30T15:04:41+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-05-30T15:05:22+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000465s ]
+
+[ 2017-05-30T15:09:00+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2017-05-30T15:09:49+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: 模板不存在:/Applications/MAMP/htdocs/tdxy-questionnaire/Home/View/Index/saveAnswer.html
+
+[ 2017-05-30T15:09:58+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: 模板不存在:/Applications/MAMP/htdocs/tdxy-questionnaire/Home/View/Index/saveAnswer.html
+
+[ 2017-05-30T21:00:10+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32068419950619641x','')' at line 1
+
+[ 2017-05-30T21:02:40+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32068419950619641x','')' at line 1
+
+[ 2017-05-30T21:38:06+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-2-A' for key 'PRIMARY'
+
+[ 2017-05-30T21:40:22+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32068419950619641x','')' at line 1
+
+[ 2017-05-30T21:45:00+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-49' for key 'PRIMARY'
+
+[ 2017-05-30T21:46:48+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '32068419950619641x' in 'where clause'
+
+[ 2017-05-30T21:55:50+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-1-A' for key 'PRIMARY'
+
+[ 2017-05-30T22:05:35+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-1-A' for key 'PRIMARY'
+
+[ 2017-05-30T22:32:32+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32068419950619641x','')' at line 1
+
+[ 2017-05-30T22:32:51+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e'w'q'w'), ('2017-2018',50,'32068419950619641x','请问请问')' at line 2
+
+[ 2017-05-30T22:36:16+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2017-2018',50,'32068419950619641x','请问请问qwqwe')' at line 2
+
+[ 2017-05-30T22:36:58+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2017-2018',50,'32068419950619641x','''''')' at line 2
+
+[ 2017-05-30T22:37:23+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-8-C' for key 'PRIMARY'
+
+[ 2017-05-30T22:37:36+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Home/Index/saveAnswer.html
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2017-2018-2-A' for key 'PRIMARY'
+

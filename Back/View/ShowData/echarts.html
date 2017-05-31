@@ -1,0 +1,92 @@
+<style>
+    .data{position: relative; width: 1000px ;height:200px ;top:50px;}
+    .charts{width: 800px;height:200px;}
+    .question{position: absolute ;top: 100px;left: 650px}
+
+</style>
+<div style="left:30%; position: absolute;top:210px;">
+<button onclick="button()" class="button orange">1-10题</button>
+<button onclick="" class="button orange">11-20题</button>
+<button onclick="" class="button orange">21-30题</button>
+<button onclick="" class="button orange">31-40题</button>
+<button onclick="" class="button orange">41+题</button>
+<button onclick="" class="button orange">建议</button>
+</div>
+<div>
+<div class="data">
+    <div class="charts" ></div>
+    <div class="question"> 42. 大一下学期就开设物理课程了，你如何为之做准备 （      ）
+        A. 要提前先温习一下高中知识，到图书馆借些书看看
+        B. 到下学期再考虑这个问题
+        C. 如果有老师提醒并提供指导，愿意在寒假的时候开始看看书
+        D. 没打算提前准备
+        E．我中学物理学得很好，打算假期看看书参加免修考试
+
+    </div>
+</div>
+<div class="data">
+    <div class="charts" ></div>
+    <div class="question"> 2. 高中三年你对英语课的兴趣（ ）
+        A. 一直很浓厚 B. 开始有兴趣，渐渐没有了
+        C. 从未有过兴趣                D. 不喜欢也不反感
+    </div>
+</div>
+<div class="data">
+    <div class="charts" ></div>
+    <div class="question"> 2. 高中三年你对英语课的兴趣（ ）
+        A. 一直很浓厚 B. 开始有兴趣，渐渐没有了
+        C. 从未有过兴趣                D. 不喜欢也不反感
+    </div>
+</div>
+
+</div>
+<script type="text/javascript">
+    function button() {
+        alert("haha");
+
+    }
+    // 基于准备好的dom，初始化echarts实例
+    var divs=document.getElementsByClassName('charts');
+    var count=0;
+    //var myChart;
+    for(var i =0;i<divs.length;i++ ){
+        var myChart = echarts.init(divs[i]);
+        count=i+1;
+        // 使用刚指定的配置项和数据显示图表。
+        option = {
+
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical'
+
+            },
+            series : [
+                {
+                    name: '选项',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:335, name:'A'},
+                        {value:310, name:'B'},
+                        {value:234, name:'C'},
+                        {value:135, name:'D'},
+                        {value:1548, name:'E'}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+
+</script>
