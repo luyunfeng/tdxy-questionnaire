@@ -15,7 +15,7 @@ class AdminController extends Controller
             'imageW' => 100,               // 验证码图片宽度
             'fontSize' => 15,              // 验证码字体大小(px)
             'length' => 4,               // 验证码位数
-            'fontttf' => '4.ttf',              // 验证码字体，不设置随机获取
+            'fontttf' => '4.ttf',      // 验证码字体，不设置随机获取
         );
         //实例化Verify类对象
         $very = new \Think\Verify($cfg);
@@ -40,7 +40,7 @@ class AdminController extends Controller
                 //$info = D('management')->where($userpwd)->find();
                 $info = D();
                 $sql = "SELECT  *
-                         FROM management
+                         FROM think_management
                          WHERE iuser='".$userpwd['username']."' AND passwd='".$userpwd['password']."'";
 
                 $data = $info->query($sql);
@@ -64,7 +64,6 @@ class AdminController extends Controller
                 // 回显一下数据
                 //dump($userpwd);
                 $this->assign('user', $userpwd);
-
             }
 
         }
@@ -89,7 +88,6 @@ class AdminController extends Controller
     public function layout()
     {
         if (!empty($_GET)) {
-
             session('username', null);
         }
         $this->redirect('Admin/login');
