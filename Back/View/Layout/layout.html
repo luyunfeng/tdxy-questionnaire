@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="{$Think.config.BACK_CSS_URL}styles.css" type="text/css" rel="stylesheet" media="all">
     <link href="{$Think.config.BACK_CSS_URL}menustyles.css" type="text/css" rel="stylesheet" media="all">
-
     <script type="text/javascript" src="{$Think.config.BACK_JS_URL}jquery.min.js"></script>
     <script src="{$Think.config.BACK_JS_URL}echarts.min.js"></script>
 </head>
@@ -16,7 +15,7 @@
     <tr height=56>
         <td width=260><img height=56 src="{$Think.config.BACK_IMG_URL}header_left.jpg"
                            width=260></td>
-        <td style="font-weight: bold; color: #fff; padding-top: 20px" align=middle>当前用户：{$username}
+        <td style="font-weight: bold; color: #fff; padding-top: 20px" align=middle>{$username}
             &nbsp;
             <a style="color: #fff"
                onclick="if (confirm('确定要退出吗？')) return true; else return false;"
@@ -33,7 +32,7 @@
         <ul id="ddmenu">
             <li><a href="{:U('Admin/index')}">管理中心</a></li>
             <li><a href="{:U('ShowData/echarts')}">问卷数据分析</a></li>
-            <li><a href="">查看完成进度</a>
+            <li><a href="{:U('ShowData/searchData')}">信息搜索</a>
 
             </li>
         </ul>
