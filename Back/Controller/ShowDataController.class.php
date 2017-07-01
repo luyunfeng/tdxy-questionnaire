@@ -198,6 +198,25 @@ class ShowDataController extends Controller
     }
 
 
+    public  function suggest()
+    {
+        $sql="SELECT text1 AS suggest FROM think_questionsnaire_fanswer  WHERE length(text1)>0 AND(inumber=49 OR inumber=36);";
+        $first_suggests = D()->query($sql);
+        $this->assign('first_suggests', $first_suggests);
+       // dump($first_suggests);
+        unset($first_suggests);
+        $sql="SELECT text1 AS suggest FROM think_questionsnaire_fanswer  WHERE length(text1)>0 AND(inumber=50 OR inumber=37);";
+        // 找出 这两题的  题目
+        $second_suggests = D()->query($sql);
+        $this->assign('second_suggests', $second_suggests);
+        unset($second_suggests);
+         // 查询出 题目
+        $sql_topic="SELECT text1 FROM think_questionsnaire_freesponce WHERE collegebranch=0";
+        $topic = D()->query($sql_topic);
+        $this->assign('topic', $topic);
+       // dump($topic);
+        $this->display();
+    }
 
 
 

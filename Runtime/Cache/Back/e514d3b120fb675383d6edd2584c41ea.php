@@ -40,26 +40,24 @@
         </ul>
     </nav>
 </div>
-<table cellspacing=0 cellpadding=0 width="90%" align=center border=0>
-    <tr height=100>
-        <td align=middle width=100><img height=100 src="<?php echo (C("BACK_IMG_URL")); ?>admin_p.gif"
-                                        width=90></td>
-        <td width=60>&nbsp;</td>
-        <td>
-            <table height=100 cellspacing=0 cellpadding=0 width="100%" border=0>
-                <tr>
-                    <td style="font-weight: bold; font-size: 16px">当前用户：<?php echo ($username); ?></td>
-                </tr>
-                <tr>
-                    <td>欢迎进入网站管理中心！</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td colspan=3 height=10></td>
-    </tr>
-</table>
+<style type="text/css">
+    .container {
+        position:absolute;
+        left: 220px;
+        top: 250px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+</style>
+<div class="container">
+    <p style="font-size: 28px ;color: #CA6106">题目一:<?php echo ($topic[0]["text1"]); ?></p>
+    <?php if(is_array($first_suggests)): foreach($first_suggests as $key=>$suggest): ?>• <?php echo ($suggest["suggest"]); ?><br/><?php endforeach; endif; ?>
+    <br/><br/><br/>
+    <p style="font-size: 28px ;color: #CA6106">题目二:<?php echo ($topic[1]["text1"]); ?></p>
+    <?php if(is_array($second_suggests)): foreach($second_suggests as $key=>$suggest): ?>• <?php echo ($suggest["suggest"]); ?><br/><?php endforeach; endif; ?>
+
+    <br/><br/><br/>
+</div>
 </body>
 
 </html>

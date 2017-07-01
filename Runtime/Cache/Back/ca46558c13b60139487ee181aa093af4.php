@@ -31,8 +31,10 @@
     <nav>
         <ul id="ddmenu">
             <li><a href="<?php echo U('Admin/index');?>">管理中心</a></li>
+            <li><a href="<?php echo U('Upload/upload');?>">上传学生信息</a></li>
             <li><a href="<?php echo U('ShowData/echarts');?>">问卷数据分析</a></li>
-            <li><a href="<?php echo U('ShowData/searchData');?>">信息搜索</a>
+            <li><a href="<?php echo U('ShowData/suggest');?>">学生建议数据</a></li>
+            <li><a href="<?php echo U('ShowData/searchData');?>">学生信息搜索</a>
 
             </li>
         </ul>
@@ -126,7 +128,7 @@
         <br/>
         <br/-->
         <form action="<?php echo U('ShowData/searchData');?>" method="POST" >
-            <input type="text" name="student_id"  placeholder="根据学生身份证查询(建议)">
+            <input type="text" name="student_id"  placeholder="输入身份证">
             <input class="button" type="submit" value="Search">
         </form>
 

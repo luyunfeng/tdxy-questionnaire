@@ -1,0 +1,22 @@
+<style type="text/css">
+    .container {
+        position:absolute;
+        left: 220px;
+        top: 250px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+</style>
+<div class="container">
+    <p style="font-size: 28px ;color: #CA6106">题目一:{$topic[0]["text1"]}</p>
+    <foreach name="first_suggests" item="suggest" >
+        • {$suggest["suggest"]}<br/>
+    </foreach>
+    <br/><br/><br/>
+    <p style="font-size: 28px ;color: #CA6106">题目二:{$topic[1]["text1"]}</p>
+    <foreach name="second_suggests" item="suggest" >
+        • {$suggest["suggest"]}<br/>
+    </foreach>
+
+    <br/><br/><br/>
+</div>
