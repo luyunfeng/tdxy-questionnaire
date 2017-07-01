@@ -1,0 +1,12 @@
+[ 2017-06-30T09:51:11+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back
+ERR: 无法加载控制器:Index
+
+[ 2017-06-30T15:53:37+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/index/collegebranch/0.html
+ERR: 非法操作:index
+
+[ 2017-06-30T15:54:19+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/echart/collegebranch/0.html
+ERR: 非法操作:echart
+
+[ 2017-06-30T15:55:03+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/echart.html?collegebranch=0
+ERR: 非法操作:echart
+

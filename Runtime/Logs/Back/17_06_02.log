@@ -1,0 +1,15 @@
+[ 2017-06-02T23:17:49+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/searchData.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+
+[ 2017-06-02T23:18:10+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/searchData.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+
+[ 2017-06-02T23:19:49+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/searchData.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form think_student where iname='德玛西亚'' at line 1
+
+[ 2017-06-02T23:20:47+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/searchData.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'elect * form think_student where iname='德玛西亚'' at line 1
+
+[ 2017-06-02T23:20:58+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/ShowData/searchData.html
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form think_student where iname='德玛西亚'' at line 1
+

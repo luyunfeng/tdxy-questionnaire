@@ -29,7 +29,7 @@
     </div>
     <div class="login_bd">
         <div class="login_form fl">
-            <form action="" method="post">
+            <form action="/tdxy-questionnaire/index.php/Home/Index/login.html" method="post">
                 <ul>
                     <li>
                         <label for="">用户名：</label>

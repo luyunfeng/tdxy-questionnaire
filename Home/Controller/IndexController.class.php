@@ -23,16 +23,16 @@ class IndexController extends Controller
                 'iuser' => $_POST['username'],
                 'passwd' => $_POST['password'],
             );
+
             //校验验证码
             $vry = new Verify();
             //先验证 验证吗是否正确
-            // if ($vry->check($_POST['checkcode'])) {
-            if (true) {
+            if ($vry->check($_POST['checkcode'])) {
+
                 // 去数据库查 这一个组合
                 $info = D('student')->where($userpwd)->find();
                 //如果有 保存session 跳转到首页
                 if ($info) {
-
                     // 验证一下如果 提交过后 就无法进入系统 检查一下是否填过
                     $sql2 = "SELECT istatus FROM think_student WHERE iuser=" . $info['iuser'];
                     $istatus = D()->query($sql2);
@@ -40,7 +40,7 @@ class IndexController extends Controller
                     if ($istatus[0]["istatus"] == 1) {
                         $error = "你已经提交过问卷调查了,无法再次进入";
                         $this->assign('error', $error);
-                    }else{
+                    } else {
                         //得到当前时间
                         date_default_timezone_set("Asia/Shanghai");// 定在 上海时区
                         $time = date("Y-m-d") . " " . date("H:i:s");
@@ -60,7 +60,6 @@ class IndexController extends Controller
                     }
 
 
-
                 } else {
                     $error = "用户名或密码错误";
                     $this->assign('error', $error);
@@ -76,6 +75,7 @@ class IndexController extends Controller
         $this->display();
     }
 
+
     public function questionnaire()
     {
 
@@ -89,36 +89,32 @@ class IndexController extends Controller
                 $this->redirect('Index/login');
             }
 
-
             // 在数据中把所有 学生的信息 取出来 根据考号
             $sql = "SELECT * FROM think_student WHERE iuser=" . $_GET['iuser'];
             $studata = D()->query($sql);
-            // dump($studata);
+            //dump($studata);
             $this->assign('studata', $studata[0]);
+            // 调出问卷
+            $questionnaire = $this->getQuestionnaire($studata[0]["collegebranch"]);
+
+            $this->assign('questionnaire', $questionnaire);
         }
-
-        // 调出  问卷
-        $questionnaire = $this->getQuestionnaire($iuser);
-        //dump($questionnaire);
-        $this->assign('questionnaire', $questionnaire);
-
         $this->display();
-
     }
 
     // 调出  问卷
-    private function getQuestionnaire()
+    private function getQuestionnaire($collegebranch)
     {
         // 把题目 从数据库中取出来
         // 先选择题
         $sql_select = "SELECT think_questionsnaire_selected.inumber,
-                            think_questionsnaire_selected.text1,
-                            think_questionsnaire_selected.itype
-                       FROM think_questionsnaire_selected";
+                       think_questionsnaire_selected.text1,
+                       think_questionsnaire_selected.itype
+                       FROM think_questionsnaire_selected WHERE collegebranch=" . $collegebranch;
         $sql_option = "SELECT think_questionsnaire_option.inumber,
                             think_questionsnaire_option.ioption,
                             think_questionsnaire_option.text1
-                      FROM  think_questionsnaire_option";
+                      FROM  think_questionsnaire_option WHERE collegebranch=" . $collegebranch;
         $select = D()->query($sql_select);
         $option = D()->query($sql_option);
         //dump($select);
@@ -134,6 +130,7 @@ class IndexController extends Controller
             //dump($option[$i]['text1']);
             $select[$number][$option[$i]['ioption']] = $option[$i]['text1'];
         }
+        //dump($select);
         // 这里为止 select 保存的
         /*
          array(48) {
@@ -194,7 +191,7 @@ class IndexController extends Controller
 
 
         // 取出填空题
-        $sql_freesponce = "SELECT *FROM think_questionsnaire_freesponce";
+        $sql_freesponce = "SELECT *FROM think_questionsnaire_freesponce WHERE collegebranch=" . $collegebranch;
         $freesponce = D()->query($sql_freesponce);
         /* [0] => array(3) {
     ["iterm"] => string(9) "2017-2018"
@@ -211,6 +208,7 @@ class IndexController extends Controller
         return $html;
     }
 
+    //  保存  答案
     public function saveAnswer()
     {
         /*
@@ -228,18 +226,40 @@ class IndexController extends Controller
         if ($_POST["idnumber"]) {
             // 提交之前把身份查出来    60 分钟直接作废
             $idnumber = $_POST["idnumber"];// 身份证
-
+            // 查出 这个学生 文理科
+            $sql_stu = "SELECT * FROM think_student WHERE idnumber='" . $idnumber . "'";
+            $studata = D()->query($sql_stu);
+            //dump($studata);
+            /*array(1) {
+  [0] => array(14) {
+    ["idnumber"] => string(18) "32068419950619641x"
+    ["iterm"] => string(9) "2017-2018"
+    ["iuser"] => string(8) "14230111"
+    ["passwd"] => string(6) "19641x"
+    ["iname"] => string(12) "德玛西亚"
+    ["sex"] => string(3) "男"
+    ["iscore"] => string(1) "9"
+    ["college"] => string(21) "计算机工程学院"
+    ["professional"] => string(12) "软件工程"
+    ["schoolbranch"] => string(1) "0"
+    ["collegebranch"] => string(1) "0"
+    ["istatus"] => string(1) "0"
+    ["logintime"] => string(19) "2017-06-30 14:06:04"
+    ["finishtime"] => string(19) "2017-05-30 22:42:18"
+  }
+}
+             * */
             // 第一步 提交 选择题
             $split_select = explode(',', $_POST["answer_select"]);
             $sql_value = "";
             foreach ($split_select as $s) {
                 $split = explode('&', $s);
-                $sql_value = $sql_value . "('2017-2018'," . $split[0] . ",'" . $idnumber . "','" . $split[1] . "'),";
+                $sql_value = $sql_value . "('2017-2018'," . $split[0] . ",'" . $idnumber . "','" . $split[1] . "'," . $studata[0]['collegebranch'] . "),";
             }
             $sql_value = substr($sql_value, 0, strlen($sql_value) - 1);
             $sql1 = "INSERT INTO think_questionsnaire_sanswer VALUES " . $sql_value;
-            //dump($sql1);
-            $succsee1 = D()->execute($sql1); // 失败就返回 false
+
+            $succsee1 = D()->execute($sql1); //  提交 选择题 失败就返回 false
             // 如果 如果发生问题
             if ($succsee1 != false) {
 
@@ -247,11 +267,21 @@ class IndexController extends Controller
                 $split_fill = explode('&&', $_POST["answer_fill"]);
                 // 这里默认只能 两题  填空题  多的话需要改 就是 49 和50 题
                 //  传入的 文字 还需要转义一下 防止 sql 攻击
-                $sql2 = "INSERT INTO think_questionsnaire_fanswer VALUES
+
+                $sql2 = "";
+                if ($studata[0]['collegebranch'] == 0) {
+                    // 理科
+                    $sql2 = "INSERT INTO think_questionsnaire_fanswer VALUES
                   ('2017-2018',49,'" . $idnumber . "','" . $split_fill[0] . "')," .
-                    " ('2017-2018',50,'" . $idnumber . "','" . $split_fill[1] . "');";
-                $succsee2 = D()->execute($sql2);
+                        " ('2017-2018',50,'" . $idnumber . "','" . $split_fill[1] . "');";
+                } else {
+                    //  文科
+                    $sql2 = "INSERT INTO think_questionsnaire_fanswer VALUES
+                  ('2017-2018',36,'" . $idnumber . "','" . $split_fill[0] . "')," .
+                        " ('2017-2018',37,'" . $idnumber . "','" . $split_fill[1] . "');";
+                }
                 //dump($sql2);
+                $succsee2 = D()->execute($sql2); // 提交 填空题
                 if ($succsee2 != false) {
 
                     // 最后将 填写状态 写成1 表示登陆过  写上完成时间
@@ -272,7 +302,7 @@ class IndexController extends Controller
                         unset($_SESSION[$iuser]);
 
                         //$_SESSION = array();
-                        dump($_SESSION);
+                        //dump($_SESSION);
                         $this->success('已完成，多谢配合，祝你学习愉快....', 'Index/login', 300);
 
                     } else {
@@ -289,9 +319,10 @@ class IndexController extends Controller
 
         }
 
+
     }
 
-     //生成验证码
+//生成验证码
     public function verifyImg()
     {
         //根据 文档生成验证吗

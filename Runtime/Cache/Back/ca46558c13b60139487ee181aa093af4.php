@@ -1,3 +1,43 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="<?php echo (C("BACK_CSS_URL")); ?>styles.css" type="text/css" rel="stylesheet" media="all">
+    <link href="<?php echo (C("BACK_CSS_URL")); ?>menustyles.css" type="text/css" rel="stylesheet" media="all">
+    <script type="text/javascript" src="<?php echo (C("BACK_JS_URL")); ?>jquery.min.js"></script>
+    <script src="<?php echo (C("BACK_JS_URL")); ?>echarts.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<table cellspacing=0 cellpadding=0 width="100%"
+       background="<?php echo (C("BACK_IMG_URL")); ?>header_bg.jpg" border=0>
+    <tr height=56>
+        <td width=260><img height=56 src="<?php echo (C("BACK_IMG_URL")); ?>header_left.jpg"
+                           width=260></td>
+        <td style="font-weight: bold; color: #fff; padding-top: 20px" align=middle><?php echo ($username); ?>
+            &nbsp;
+            <a style="color: #fff"
+               onclick="if (confirm('确定要退出吗？')) return true; else return false;"
+               href="<?php echo U('Admin/layout');?>?username=<?php echo ($username); ?>"
+               target=_top>退出系统</a>
+        </td>
+        <td align=right width=268>
+            <img height=56 src="<?php echo (C("BACK_IMG_URL")); ?>header_right.jpg" width=268>
+        </td>
+    </tr>
+</table>
+<div id="w">
+    <nav>
+        <ul id="ddmenu">
+            <li><a href="<?php echo U('Admin/index');?>">管理中心</a></li>
+            <li><a href="<?php echo U('ShowData/echarts');?>">问卷数据分析</a></li>
+            <li><a href="<?php echo U('ShowData/searchData');?>">信息搜索</a>
+
+            </li>
+        </ul>
+    </nav>
+</div>
 <style type="text/css" media="screen">
     input[type=text],
     input[type=password] {
@@ -85,8 +125,8 @@
         </form>
         <br/>
         <br/-->
-        <form action="{:U('ShowData/searchData')}" method="POST" >
-            <input type="text" name="student_id"  placeholder="输入身份证">
+        <form action="<?php echo U('ShowData/searchData');?>" method="POST" >
+            <input type="text" name="student_id"  placeholder="根据学生身份证查询(建议)">
             <input class="button" type="submit" value="Search">
         </form>
 
@@ -94,17 +134,21 @@
 </div>
 <div class="stuinfo">
     <br/>
-    <p style="color: red ;font-size: 40px">{$stu_error}</p>
+    <p style="color: red ;font-size: 40px"><?php echo ($stu_error); ?></p>
     <br/>
-    <div class="stu_div">姓名：{$stu_info["iname"]}</div>
-    <div class="stu_div">身份证：{$stu_info["idnumber"]}</div>
+    <div class="stu_div">姓名：<?php echo ($stu_info["iname"]); ?></div>
+    <div class="stu_div">身份证：<?php echo ($stu_info["idnumber"]); ?></div>
     <div class="stu_div">
         <div style="color: red">
-            {$str_msg_1}
+            <?php echo ($str_msg_1); ?>
         </div>
         <div style="color: green">
-            {$str_msg_2}
+            <?php echo ($str_msg_2); ?>
         </div>
     </div>
 </div>
 
+
+</body>
+
+</html>

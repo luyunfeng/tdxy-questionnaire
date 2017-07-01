@@ -1,0 +1,3 @@
+[ 2017-05-31T14:51:28+08:00 ] 127.0.0.1 /tdxy-questionnaire/index.php/Back/Admin/login.html
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'think_stu_questionsnaire.management' doesn't exist
+
